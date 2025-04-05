@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import './Todo.css';
+import './todo.css';
 import { FcTodoList } from 'react-icons/fc';
 import { ImBin } from 'react-icons/im';
 import { FaGithub } from 'react-icons/fa';
