@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url(../assets/dark_graph.jpeg);
+  background-image: url(./assets/dark_graph.jpeg);
   display: flex;
   align-items: center;
   justify-content: center;
