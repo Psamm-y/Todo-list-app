@@ -72,12 +72,14 @@ const Todo = () => {
         ))}
       </div>
       <footer>
-        &copy; 2025 Psammy dev{' '}
-        <a href="https://github.com.psamm-y" target="_blank">
-          &nbsp;
-          <FaGithub />
-        </a>
-        . All rights reserved
+        <div>
+          &copy; 2025 Psammy dev
+          <a href="https://github.com.psamm-y" target="_blank">
+            &nbsp;
+            <FaGithub />
+          </a>
+          . All rights reserved
+        </div>
       </footer>
     </>
   );
