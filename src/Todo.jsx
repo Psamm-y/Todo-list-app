@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './todo.css';
 import { FcTodoList } from 'react-icons/fc';
 import { ImBin } from 'react-icons/im';
 import { FaGithub } from 'react-icons/fa';
 const Todo = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    const storedTodos = localStorage.getItem('tasks');
+    return storedTodos ? JSON.parse(storedTodos) : [];
+  });
   const [inputValue, setInputValue] = useState('');
 
   const handleInput = (e) => {
@@ -35,6 +38,17 @@ const Todo = () => {
   const handleRemove = (id) => {
     setTasks((prevTasks) => prevTasks.filter((todo) => todo.id !== id));
   };
+
+  useEffect(() => {
+    const storedTodos = localStorage.getItem('tasks');
+    if (storedTodos) {
+      setTasks(JSON.parse(storedTodos));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
   return (
     <>
       {' '}
@@ -44,14 +58,14 @@ const Todo = () => {
             <FcTodoList />
             My Todo List App
           </h2>
-          <form>
+          <form onSubmit={handleAddTodo}>
             <input
               type="text"
               onChange={handleInput}
               value={inputValue}
               placeholder="Enter a task..."
             />
-            &nbsp;<button onClick={handleAddTodo}>Add todo</button>
+            &nbsp;<button type="submit">Add todo</button>
           </form>
         </div>
 
@@ -74,7 +88,7 @@ const Todo = () => {
       <footer>
         <div>
           &copy; 2025 Psammy dev
-          <a href="https://github.com.psamm-y" target="_blank">
+          <a href="https://github.com/psamm-y" target="_blank">
             &nbsp;
             <FaGithub />
           </a>
