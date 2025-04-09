@@ -10,6 +10,7 @@ a {
   text-decoration: none;
 }
 body {
+  color: black;
   background-image: url(./assets/dark_graph.jpeg);
   display: flex;
   align-items: center;
