@@ -5,7 +5,10 @@
   word-break: break-all;
   padding: 0;
 }
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
 body {
   background-image: url(./assets/dark_graph.jpeg);
   display: flex;
@@ -14,7 +17,20 @@ body {
   padding-top: 1em;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.star {
+  position: fixed;
+  padding: 0.3em;
+  right: 0;
+  color: rgb(103, 163, 216);
+  background-color: black;
+  top: 0;
+  border-bottom-left-radius: 0.5em;
+  transition: 1s;
+}
+.star:hover {
+  color: black;
+  background-color: rgb(103, 163, 216);
+}
 button {
   cursor: pointer;
   white-space: nowrap;
@@ -30,7 +46,7 @@ button {
   box-shadow: 0.3em 0.3em 0em rgba(69, 99, 124, 0.201);
   border: 1px solid rgba(70, 69, 69, 0.468);
   border-radius: 2px;
-  padding: 4em 2em 2em 2em;
+  padding: 2em;
   overflow-y: scroll;
 }
 .fixed {
@@ -46,7 +62,7 @@ button {
   margin-bottom: 1em;
 }
 li {
-  font-size: 1.2em;
+  font-size: 1em;
   list-style-type: none;
   width: 100%;
   display: flex;
@@ -58,7 +74,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1em;
+  margin-bottom: 0.3em;
 }
 .todo-block form input {
   width: 100%;

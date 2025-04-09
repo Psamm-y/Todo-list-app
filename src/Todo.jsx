@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import './todo.css';
 import { FcTodoList } from 'react-icons/fc';
 import { ImBin } from 'react-icons/im';
-import { FaGithub } from 'react-icons/fa';
+
 const Todo = () => {
   const [tasks, setTasks] = useState(() => {
     const storedTodos = localStorage.getItem('tasks');
@@ -51,6 +51,15 @@ const Todo = () => {
   }, [tasks]);
   return (
     <>
+      <div className="star">
+        <a
+          target="_blank"
+          href="https://github.com/Psamm-y/Todo-list-app/tree/main"
+        >
+          {' '}
+          🌟Give us a star
+        </a>
+      </div>
       <div className="todo-block">
         <div className="fixed">
           <h2>
