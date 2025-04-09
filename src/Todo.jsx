@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import './todo.css';
 import { FcTodoList } from 'react-icons/fc';
 import { ImBin } from 'react-icons/im';
-
 const Todo = () => {
   const [tasks, setTasks] = useState(() => {
     const storedTodos = localStorage.getItem('tasks');
