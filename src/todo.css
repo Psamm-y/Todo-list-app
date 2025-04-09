@@ -22,7 +22,7 @@ body {
   position: fixed;
   padding: 0.3em;
   right: 0;
-  color: rgb(103, 163, 216);
+  color: #67a3d8;
   background-color: black;
   top: 0;
   border-bottom-left-radius: 0.5em;
@@ -30,7 +30,7 @@ body {
 }
 .star:hover {
   color: black;
-  background-color: rgb(103, 163, 216);
+  background-color: #67a3d8;
 }
 button {
   cursor: pointer;
@@ -57,7 +57,7 @@ button {
 .todo-block h2 {
   display: flex;
   align-items: center;
-  color: rgb(103, 163, 216);
+  color: #67a3d8;
   font-family: 'Tektur', sans-serif;
   justify-content: center;
   margin-bottom: 1em;
@@ -95,7 +95,8 @@ form {
   width: 100%;
 }
 form button {
-  border: 1px solid rgb(103, 163, 216);
+  color: #000000;
+  border: 2px solid #67a3d8;
   background-color: white;
   height: 3em;
   border-top-right-radius: 0.5em;
@@ -105,12 +106,12 @@ form button {
   box-shadow: 0.1em 0.1em 2px rgba(69, 99, 124, 0.486);
 }
 form button:hover {
-  background-color: rgb(103, 163, 216);
-  border: 1px solid;
-  color: white;
+  background-color: #67a3d8;
+  border: 2px solid;
+  color: #ffffff;
 }
 input[type='checkbox']:checked {
-  accent-color: rgb(103, 163, 216);
+  accent-color: #67a3d8;
 }
 .completed {
   text-decoration: line-through gray;
@@ -127,7 +128,7 @@ footer {
   justify-content: center;
   align-items: center;
   position: fixed;
-  color: white;
+  color: #ffffff;
   width: 100%;
   left: 0;
   bottom: 0;
