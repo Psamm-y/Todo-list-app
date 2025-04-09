@@ -51,7 +51,6 @@ const Todo = () => {
   }, [tasks]);
   return (
     <>
-      {' '}
       <div className="todo-block">
         <div className="fixed">
           <h2>
@@ -88,10 +87,12 @@ const Todo = () => {
       <footer>
         <div>
           &copy; 2025 Psammy dev
-          <a href="https://github.com/psamm-y" target="_blank">
-            &nbsp;
-            <FaGithub />
-          </a>
+          {/* <span>
+            <a href="https://github.com/psamm-y" target="_blank">
+              &nbsp;
+              <FaGithub />
+            </a>
+          </span> */}
           . All rights reserved
         </div>
       </footer>
