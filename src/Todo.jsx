@@ -43,6 +43,7 @@ const Todo = () => {
     if (storedTodos) {
       setTasks(JSON.parse(storedTodos));
     }
+    document.title = 'Todo List';
   }, []);
 
   useEffect(() => {
